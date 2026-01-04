@@ -1,2 +1,6 @@
 # Actuarial-Risk-Premium-Modeling-CAS-ACTEX-Case-Study
-Modelo actuarial para la estimación de la prima pura de riesgo usando GLM Tweedie, basado en un caso de la competencia CAS / ACTEX.
+Este repositorio presenta un modelo actuarial de tarificación para la estimación de la prima pura de riesgo en seguros de hogar para inquilinos, basado en un caso de la competencia CAS / ACTEX. El objetivo del modelo es estimar el valor esperado del monto total de siniestros por póliza, condicionado a las características del asegurado y de la vivienda, sin incorporar gastos, impuestos ni márgenes de utilidad.
+
+El modelo se construye utilizando un conjunto de datos simulados de 10.000 pólizas y define como variable objetivo la suma de los siniestros observados en cuatro coberturas. Se aplican técnicas de ingeniería de variables como target encoding, recodificación binaria, términos de interacción y transformaciones logarítmicas, con el fin de capturar de manera adecuada los factores de riesgo relevantes.
+
+La estimación se realiza mediante un Modelo Lineal Generalizado con distribución Tweedie y función de enlace logarítmica, ampliamente utilizado en la práctica actuarial para la tarificación de seguros generales. El desempeño del modelo se evalúa mediante el Error Absoluto Medio y el coeficiente de Gini, alcanzando un Gini aproximado de 0.454, lo que indica una alta capacidad de discriminación del riesgo.
